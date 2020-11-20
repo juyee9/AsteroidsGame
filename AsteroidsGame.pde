@@ -4,26 +4,30 @@ public void setup()
 {
   size(500,500);
   background(0);
+  //creates stars 
   for(int i = 0;i < nightSky.length; i++){
     nightSky[i] = new Stars();
   }
 }
 public void draw() {
   background(0);
+  //draws stars
   for(int i = 0; i < nightSky.length; i++){
   nightSky[i].show();
   }
+  //draws spaceship
   bob.show();
   bob.move();
 }
-public void keyPressed()
-{
+
+public void keyPressed(){
   if(key == 'h') //hyperspace
   {
     bob.setXspeed(0);
     bob.setYspeed(0);
     bob.hyperspaceX(Math.random()*500);
     bob.hyperspaceY(Math.random()*500);
+    bob.direction(Math.random()*500);
   }
   if(key == 'w') //accelerate
   {
