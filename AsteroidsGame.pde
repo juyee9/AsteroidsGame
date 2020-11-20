@@ -16,7 +16,6 @@ public void draw() {
   bob.show();
   bob.move();
 }
-
 public void keyPressed()
 {
   if(key == 'h') //hyperspace
